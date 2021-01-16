@@ -22,7 +22,7 @@ def main():
             replylist.append(['https://space.bilibili.com/' + reply['member']['mid'],reply['member']['uname'],reply['content']['message']])
         random.shuffle(replylist)
         print('第'+ str(page) + '页获取完毕')
-    
+    random.shuffle(replylist)
     random.seed(int(round(time.time() * 1000)))
     winer = replylist[random.randint(0,len(replylist)-1)]
 
